@@ -41,7 +41,7 @@ desirable but is error-prone given the `Iterator/IntoIterator` impls on ranges.
 The example here does not compile today (since Range is not Copy), but would be
 unintuitive if it did.
 
-```rust
+```rust,compile_fail
 let mut x = 0..10;
 let mut c = move || x.next();
 println!("{:?}", x.next()); // prints 0
